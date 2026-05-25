@@ -51,3 +51,24 @@ def edit_distance(s1, s2):
 
 print(f"Edit Distance: {edit_distance('horse', 'ros')}")
 print(f"Edit Distance: {edit_distance('intention', 'execution')}")
+
+
+
+
+def longest_unique_substring(s):
+    char_index = {}
+    max_len = 0
+    start = 0
+
+    for end in range(len(s)):
+        if s[end] in char_index and char_index[s[end]] >= start:
+            start = char_index[s[end]] + 1
+
+        char_index[s[end]] = end
+        max_len = max(max_len, end - start + 1)
+
+    return max_len
+
+print(f"Length: {longest_unique_substring('abcabcbb')}")
+print(f"Length: {longest_unique_substring('bbbbb')}")
+print(f"Length: {longest_unique_substring('pwwkew')}")
