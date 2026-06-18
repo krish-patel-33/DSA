@@ -67,6 +67,42 @@ a, b = 48, 18
 
 # print(f"first: {first}, second: {second}")
 
+# lis = [1 , 2,8,7,9,4,1]
+# left , right = 0 , len(lis) - 1
+
+# while left < right:
+#     lis[left], lis[right] = lis[right], lis[left]
+#     left += 1
+#     right -= 1
+
+# print(lis)
+
+lis = [1 , 2,8,7,9,4,1,21,8,22]
+# seen = set()
+# result = []
+
+# for num in lis:
+#     if num not in seen:
+#         seen.add(num)
+#         result.append(num)
+
+# print(result)
+
+
+
+print(list(dict.fromkeys(lis)))
+
+
+l = [1,2,3,4,5,6,14,7,54,2,3,2,1,2,44]
+
+freq = {}
+
+for n in l:
+    freq[n] = freq.get(n,0) + 1
+
+for key , value in freq.items():
+    print(f"{key} appears {value} times ")
+
 
 # rev = 0
 
